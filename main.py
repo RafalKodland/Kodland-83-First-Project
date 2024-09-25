@@ -1,19 +1,10 @@
-meme_dict = {
-    "CRINGE": "Coś wyjątkowo dziwnego lub zawstydzającego",
-    "LOL": "Częsta reakcja na coś zabawnego",
-    "ROFL": "odpowiedź na żart",
-    "SHEESH": "lekka dezaprobata",
-    "CREEPY": "straszny, złowieszczy",
-    "AGGRO": "stać się agresywnym/zły"
-}
+import random
 
-while True:
-    word = input("Wpisz słowo, którego nie rozumiesz (używaj wielkich liter!): ")
-    word = word.upper()
-    word = word.strip()
-    if word in meme_dict.keys():
-        print(meme_dict[word])
-    else:
-        print("Niestety nie znam takiego słowa")
+elements = "+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+pass_length = int(input("Podaj długość hasła: "))
 
-    print(" ")
+password = ""
+for i in range(pass_length):
+    password += random.choice(elements)
+
+print(password)
