@@ -1,10 +1,10 @@
 import random
-#Test
-elements = "+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-pass_length = int(input("Podaj długość hasła: "))
 
-password = ""
-for i in range(pass_length):
-    password += random.choice(elements)
+def pswd(pass_length=10):
+    elements = "+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-print(password)
+    password = ""
+    for i in range(pass_length):
+        password += random.choice(elements)
+    
+    return password
